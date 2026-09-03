@@ -1,0 +1,58 @@
+import { Testimonial } from '@/types';
+
+export const testimonials: Testimonial[] = [
+  {
+    id: '1',
+    quote: 'Ox Consults transformed our approach to growth strategy. Their team brought a rare combination of analytical rigor and practical wisdom that helped us unlock opportunities we hadn\'t considered. The results exceeded our most optimistic projections.',
+    author: 'Margaret Liu',
+    role: 'CEO',
+    company: 'Vanguard Financial Group',
+    image: '/images/testimonials/margaret.jpg',
+    industry: 'Financial Services',
+  },
+  {
+    id: '2',
+    quote: 'Working with Ox Consults on our digital transformation was a turning point for our organization. They didn\'t just recommend technology—they helped us reimagine our entire operating model and build the capabilities to sustain change.',
+    author: 'Dr. Robert Andersen',
+    role: 'Chief Operating Officer',
+    company: 'Pacific Health Systems',
+    image: '/images/testimonials/robert.jpg',
+    industry: 'Healthcare',
+  },
+  {
+    id: '3',
+    quote: 'The market entry strategy Ox Consults developed for our European expansion was exceptional. Their local knowledge, combined with deep strategic thinking, gave us the confidence to move quickly and decisively. We launched in 3 markets in under a year.',
+    author: 'Anil Kapoor',
+    role: 'Founder & CEO',
+    company: 'CloudScale Technologies',
+    image: '/images/testimonials/anil.jpg',
+    industry: 'Technology & SaaS',
+  },
+  {
+    id: '4',
+    quote: 'Ox Consults helped us redesign our supply chain during one of the most challenging periods in our industry\'s history. Their pragmatic, data-driven approach delivered results fast—and built resilience that continues to pay dividends.',
+    author: 'Christine Müller',
+    role: 'SVP Global Supply Chain',
+    company: 'Nexus Industrial Group',
+    image: '/images/testimonials/christine.jpg',
+    industry: 'Manufacturing & Supply Chain',
+  },
+  {
+    id: '5',
+    quote: 'The organizational redesign Ox Consults led was the most impactful initiative we\'ve undertaken in a decade. They navigated sensitive leadership dynamics with remarkable skill and delivered a structure that has energized our entire workforce.',
+    author: 'Thomas Wright',
+    role: 'CHRO',
+    company: 'Ascend Retail Holdings',
+    image: '/images/testimonials/thomas.jpg',
+    industry: 'Retail & Consumer Goods',
+  },
+  {
+    id: '6',
+    quote: 'We engaged Ox Consults for a critical M&A integration, and they delivered beyond expectations. Their post-merger integration framework prevented the value leakage we\'d experienced in previous deals. Truly world-class advisory.',
+    author: 'Sarah Blackwell',
+    role: 'Managing Director',
+    company: 'Pinnacle Capital Partners',
+    image: '/images/testimonials/sarah-b.jpg',
+    industry: 'Financial Services',
+  },
+];

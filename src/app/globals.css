@@ -1,0 +1,351 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* ============================================================
+   OX CONSULTS — DESIGN SYSTEM
+   Premium consulting firm aesthetic with corporate-modern style
+   ============================================================ */
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Brand Colors */
+  --background: 40 33% 98%;
+  --foreground: 222 47% 11%;
+  
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+  
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 11%;
+  
+  --primary: 222 47% 11%;
+  --primary-foreground: 40 33% 98%;
+  
+  --secondary: 220 14% 96%;
+  --secondary-foreground: 222 47% 11%;
+  
+  --muted: 220 14% 96%;
+  --muted-foreground: 220 9% 46%;
+  
+  --accent: 160 84% 39%;
+  --accent-foreground: 0 0% 100%;
+  
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+
+  --border: 220 13% 91%;
+  --input: 220 13% 91%;
+  --ring: 160 84% 39%;
+  
+  /* Brand Specific */
+  --gold: 43 74% 49%;
+  --gold-light: 43 74% 66%;
+  --bronze: 30 56% 50%;
+  --navy: 222 47% 11%;
+  --navy-deep: 225 50% 8%;
+  --paper: 40 33% 98%;
+  --paper-warm: 36 33% 95%;
+  --emerald: 160 84% 39%;
+  --emerald-dark: 160 84% 29%;
+  --cobalt: 217 91% 60%;
+  --slate-mid: 220 9% 46%;
+  
+  --radius: 0.625rem;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.04);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.08), 0 8px 10px -6px rgb(0 0 0 / 0.04);
+  --shadow-gold: 0 4px 14px -2px hsl(43 74% 49% / 0.15);
+  --shadow-emerald: 0 4px 14px -2px hsl(160 84% 39% / 0.15);
+}
+
+.dark {
+  --background: 225 50% 6%;
+  --foreground: 40 20% 92%;
+  
+  --card: 225 44% 10%;
+  --card-foreground: 40 20% 92%;
+  
+  --popover: 225 44% 10%;
+  --popover-foreground: 40 20% 92%;
+  
+  --primary: 40 20% 92%;
+  --primary-foreground: 225 50% 6%;
+  
+  --secondary: 222 30% 16%;
+  --secondary-foreground: 40 20% 92%;
+  
+  --muted: 222 30% 16%;
+  --muted-foreground: 220 13% 65%;
+  
+  --accent: 160 84% 39%;
+  --accent-foreground: 0 0% 100%;
+  
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  
+  --border: 222 30% 18%;
+  --input: 222 30% 18%;
+  --ring: 160 84% 39%;
+  
+  --gold: 43 74% 55%;
+  --gold-light: 43 74% 40%;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.2);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.2);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.2);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.3), 0 8px 10px -6px rgb(0 0 0 / 0.2);
+}
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-gold: hsl(var(--gold));
+  --color-gold-light: hsl(var(--gold-light));
+  --color-bronze: hsl(var(--bronze));
+  --color-navy: hsl(var(--navy));
+  --color-navy-deep: hsl(var(--navy-deep));
+  --color-paper: hsl(var(--paper));
+  --color-paper-warm: hsl(var(--paper-warm));
+  --color-emerald: hsl(var(--emerald));
+  --color-emerald-dark: hsl(var(--emerald-dark));
+  --color-cobalt: hsl(var(--cobalt));
+  --color-slate-mid: hsl(var(--slate-mid));
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* ============================================================
+   BASE STYLES
+   ============================================================ */
+
+* {
+  @apply border-border;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================================
+   TYPOGRAPHY
+   ============================================================ */
+
+.heading-display {
+  font-family: var(--font-serif), Georgia, serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.heading-section {
+  font-family: var(--font-serif), Georgia, serif;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+}
+
+.text-body-lg {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: hsl(var(--muted-foreground));
+}
+
+.text-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: hsl(var(--gold));
+}
+
+/* ============================================================
+   COMPONENT STYLES
+   ============================================================ */
+
+.card-elevated {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-elevated:hover {
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-2px);
+  border-color: hsl(var(--gold) / 0.3);
+}
+
+.glass {
+  background: hsl(var(--background) / 0.8);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+}
+
+.dark .glass {
+  background: hsl(var(--background) / 0.85);
+}
+
+/* Gold accent line */
+.accent-line {
+  display: block;
+  width: 3rem;
+  height: 3px;
+  background: linear-gradient(90deg, hsl(var(--gold)), hsl(var(--gold-light)));
+  border-radius: 2px;
+}
+
+/* ============================================================
+   LOGO MARQUEE
+   ============================================================ */
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  animation: marquee 40s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* ============================================================
+   GRADIENT UTILITIES
+   ============================================================ */
+
+.gradient-hero {
+  background: linear-gradient(
+    135deg,
+    hsl(var(--navy-deep)) 0%,
+    hsl(var(--navy)) 40%,
+    hsl(222 40% 18%) 100%
+  );
+}
+
+.gradient-gold {
+  background: linear-gradient(135deg, hsl(var(--gold)), hsl(var(--bronze)));
+}
+
+.gradient-emerald {
+  background: linear-gradient(135deg, hsl(var(--emerald)), hsl(var(--emerald-dark)));
+}
+
+.gradient-text-gold {
+  background: linear-gradient(135deg, hsl(var(--gold)), hsl(var(--gold-light)));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ============================================================
+   SECTION BACKGROUNDS
+   ============================================================ */
+
+.section-alternate {
+  background: hsl(var(--paper-warm));
+}
+
+.dark .section-alternate {
+  background: hsl(222 40% 8%);
+}
+
+/* ============================================================
+   SCROLLBAR
+   ============================================================ */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--secondary));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground) / 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.5);
+}
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 2s ease-in-out infinite;
+}
+
+/* ============================================================
+   GRID PATTERN (for hero backgrounds)
+   ============================================================ */
+
+.grid-pattern {
+  background-image: 
+    linear-gradient(hsl(var(--foreground) / 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--foreground) / 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.dark .grid-pattern {
+  background-image: 
+    linear-gradient(hsl(var(--foreground) / 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--foreground) / 0.05) 1px, transparent 1px);
+}
