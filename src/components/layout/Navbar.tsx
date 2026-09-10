@@ -23,11 +23,11 @@ export function Navbar() {
   }, []);
 
   const navLinks = [
+    { name: "About", href: "/about" },
     { name: "Services", href: "/services" },
     { name: "Industries", href: "/industries" },
     { name: "Case Studies", href: "/case-studies" },
     { name: "Insights", href: "/insights" },
-    { name: "About", href: "/about" },
   ];
 
   const visibleLinks = navLinks.filter((link) => link.href !== pathname);
