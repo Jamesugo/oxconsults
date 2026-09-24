@@ -14,25 +14,11 @@ import { CTAButton } from "@/components/shared/CTAButton";
 
 const offices = [
   {
-    city: "London",
-    address: "100 Oxford Street, W1D 1LL",
-    phone: "+44 (0) 20 7123 4567",
-    email: "london@oxconsults.com",
-    hours: "Mon-Fri: 9:00 AM - 6:00 PM GMT"
-  },
-  {
-    city: "New York",
-    address: "1 World Trade Center, NY 10007",
-    phone: "+1 (212) 555-0123",
-    email: "newyork@oxconsults.com",
-    hours: "Mon-Fri: 9:00 AM - 6:00 PM EST"
-  },
-  {
-    city: "Singapore",
-    address: "1 Raffles Place, 048616",
-    phone: "+65 6123 4567",
-    email: "singapore@oxconsults.com",
-    hours: "Mon-Fri: 9:00 AM - 6:00 PM SGT"
+    city: "Enugu Office",
+    address: "12 Omachiani street Idaw-river layout,Enugu State, Nigeria",
+    phone: "+234 8160990533",
+    email: "oxconsultsinfo@gmail.com",
+    hours: "Mon-Fri: 9:00 AM - 6:00 PM WAT"
   }
 ];
 
@@ -139,7 +125,7 @@ export default function ContactPage() {
             <ScrollReveal direction="left">
               <div className="space-y-12">
                 <div>
-                  <h2 className="font-serif text-2xl font-bold mb-8">Global Offices</h2>
+                  <h2 className="font-serif text-2xl font-bold mb-8">Our Office</h2>
                   <div className="grid gap-8">
                     {offices.map((office, idx) => (
                       <Card key={idx} className="border-border bg-transparent shadow-none hover:bg-secondary/20 transition-colors">

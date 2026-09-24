@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Briefcase, MessageCircle, Mail, MapPin } from "lucide-react";
+import { Briefcase, MessageCircle, Mail, MapPin, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function Footer() {
@@ -58,11 +58,15 @@ export function Footer() {
             <ul className="space-y-4 text-sm">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-emerald shrink-0" />
-                <span>100 Oxford Street<br/>London, W1D 1LL<br/>United Kingdom</span>
+                <span>12 Omachiani street Idaw-river layout,Enugu State, Nigeria</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <Phone className="w-5 h-5 text-emerald shrink-0" />
+                <a href="tel:+2348160990533" className="hover:text-white transition-colors">+234 8160990533</a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-emerald shrink-0" />
-                <a href="mailto:hello@oxconsults.com" className="hover:text-white transition-colors">hello@oxconsults.com</a>
+                <a href="mailto:oxconsultsinfo@gmail.com" className="hover:text-white transition-colors">oxconsultsinfo@gmail.com</a>
               </li>
             </ul>
           </div>
