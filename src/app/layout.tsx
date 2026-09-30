@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   title: "Ox Consults | Clarity in Strategy. Confidence in Execution.",
   description: "A world-class management, strategy, and business advisory firm.",
   icons: {
-    icon: "/ox-consults-logo.svg",
+    icon: "/favicon.png",
   },
 };
 
