@@ -1,9 +1,19 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { Menu, X } from "lucide-react";
+import {
+  BriefcaseBusiness,
+  ChartNoAxesCombined,
+  ChevronRight,
+  Factory,
+  Menu,
+  MessageCircle,
+  Newspaper,
+  UsersRound,
+} from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "../shared/ThemeToggle";
 import { CTAButton } from "../shared/CTAButton";
@@ -23,11 +33,11 @@ export function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "About", href: "/about" },
-    { name: "Services", href: "/services" },
-    { name: "Industries", href: "/industries" },
-    { name: "Case Studies", href: "/case-studies" },
-    { name: "Insights", href: "/insights" },
+    { name: "About", href: "/about", icon: UsersRound },
+    { name: "Services", href: "/services", icon: BriefcaseBusiness },
+    { name: "Industries", href: "/industries", icon: Factory },
+    { name: "Case Studies", href: "/case-studies", icon: ChartNoAxesCombined },
+    { name: "Insights", href: "/insights", icon: Newspaper },
   ];
 
   const visibleLinks = navLinks.filter((link) => link.href !== pathname);
@@ -36,14 +46,20 @@ export function Navbar() {
     <header
       className={cn(
         "fixed top-0 w-full z-50 transition-all duration-300 border-b border-transparent",
-        scrolled ? "bg-background/80 backdrop-blur-md border-border shadow-sm py-3" : "bg-transparent py-5"
+        scrolled
+          ? "bg-background/80 backdrop-blur-md border-border shadow-sm py-2 md:py-3"
+          : "bg-transparent py-3 md:py-5"
       )}
     >
-      <div className="container mx-auto px-6 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 bg-emerald rounded flex items-center justify-center text-white font-bold text-xl group-hover:bg-emerald-dark transition-colors">
-            O
-          </div>
+      <div className="container mx-auto px-4 sm:px-6 flex items-center justify-between">
+        <Link href="/" className="flex shrink-0 items-center gap-2 group">
+          <Image
+            src="/ox-consults-logo.svg"
+            alt=""
+            width={40}
+            height={32}
+            className="h-8 w-10 rounded-sm bg-white object-contain"
+          />
           <span className={cn(
             "font-serif font-bold text-xl tracking-tight transition-colors",
             scrolled ? "text-foreground" : "text-foreground dark:text-white"
@@ -98,47 +114,65 @@ export function Navbar() {
         </div>
 
         {/* Mobile Nav */}
-        <div className="md:hidden flex items-center gap-2">
+        <div className="md:hidden flex items-center gap-1">
           <div className={cn(
             "transition-opacity",
             !scrolled && "opacity-80 hover:opacity-100 dark:text-white"
           )}>
-            <ThemeToggle />
+            <ThemeToggle className="size-10" />
           </div>
           <Sheet>
             <SheetTrigger render={
               <Button 
                 variant="ghost" 
                 size="icon" 
-                className={cn(!scrolled && "text-foreground hover:bg-secondary dark:text-white dark:hover:bg-white/10 dark:hover:text-white")} 
+                aria-label="Open navigation menu"
+                className={cn("size-10", !scrolled && "text-foreground hover:bg-secondary dark:text-white dark:hover:bg-white/10 dark:hover:text-white")} 
               />
             }>
               <Menu className="h-6 w-6" />
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-              <nav className="flex flex-col gap-4 mt-8">
+            <SheetContent side="right" className="w-[300px] sm:w-[400px] px-5 pt-8 pb-6">
+              <div className="flex items-center gap-3 border-b border-border pb-5 pr-10">
+                <Image
+                  src="/ox-consults-logo.svg"
+                  alt=""
+                  width={50}
+                  height={40}
+                  className="h-10 w-[50px] rounded-sm bg-white object-contain"
+                />
+                <span className="font-serif text-lg font-bold text-foreground">Ox Consults</span>
+              </div>
+              <nav className="mt-6 flex flex-col gap-1">
                 {visibleLinks.map((link) => (
                   <Link
                     key={link.name}
                     href={link.href}
-                    className="text-lg font-medium py-2 border-b border-border"
+                    className="group flex items-center gap-3 rounded-lg px-3 py-3 text-base font-medium transition-colors hover:bg-secondary"
                   >
-                    {link.name}
+                    <link.icon aria-hidden="true" className="h-5 w-5 text-muted-foreground" />
+                    <span className="flex-1">{link.name}</span>
+                    <ChevronRight aria-hidden="true" className="h-4 w-4 text-muted-foreground/60 transition-transform group-hover:translate-x-0.5" />
                   </Link>
                 ))}
                 {pathname !== "/contact" && (
-                  <Link href="/contact" className="text-lg font-medium py-2 border-b border-border">
-                    Contact
+                  <Link
+                    href="/contact"
+                    className="group flex items-center gap-3 rounded-lg px-3 py-3 text-base font-medium transition-colors hover:bg-secondary"
+                  >
+                    <MessageCircle aria-hidden="true" className="h-5 w-5 text-muted-foreground" />
+                    <span className="flex-1">Contact</span>
+                    <ChevronRight aria-hidden="true" className="h-4 w-4 text-muted-foreground/60 transition-transform group-hover:translate-x-0.5" />
                   </Link>
                 )}
-                {pathname !== "/booking" && (
-                  <div className="mt-4">
-                    <Link href="/booking">
-                      <CTAButton className="w-full">Book Consultation</CTAButton>
-                    </Link>
-                  </div>
-                )}
               </nav>
+              {pathname !== "/booking" && (
+                <div className="mt-auto border-t border-border pt-5">
+                  <Link href="/booking">
+                    <CTAButton className="w-full">Book Consultation</CTAButton>
+                  </Link>
+                </div>
+              )}
             </SheetContent>
           </Sheet>
         </div>

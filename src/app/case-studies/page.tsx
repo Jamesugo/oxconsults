@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { caseStudies } from "@/data/case-studies";
@@ -72,8 +73,14 @@ export default function CaseStudiesPage() {
                 <Link href={`/case-studies/${study.slug}`} className="block group h-full">
                   <Card className="h-full border-border overflow-hidden card-elevated rounded-xl flex flex-col">
                     <div className="w-full h-48 bg-secondary flex items-center justify-center relative overflow-hidden">
+                      <Image
+                        src={study.image}
+                        alt={study.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
-                      <span className="text-muted-foreground font-serif italic text-lg z-0">{study.industry} Visual</span>
                       
                       <div className="absolute bottom-4 left-4 z-20 flex gap-2">
                         <Badge className="bg-primary text-primary-foreground hover:bg-primary font-medium border-none">

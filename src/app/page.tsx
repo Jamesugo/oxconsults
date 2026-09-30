@@ -1,6 +1,5 @@
 import { HeroSection } from "@/components/home/HeroSection";
 import { ClientLogos } from "@/components/home/ClientLogos";
-import { StatCounters } from "@/components/home/StatCounters";
 import { ServicesOverview } from "@/components/home/ServicesOverview";
 import { ApproachSection } from "@/components/home/ApproachSection";
 import { CaseStudyPreview } from "@/components/home/CaseStudyPreview";
@@ -13,7 +12,6 @@ export default function Home() {
     <>
       <HeroSection />
       <ClientLogos />
-      <StatCounters />
       <ServicesOverview />
       <ApproachSection />
       <CaseStudyPreview />

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { insights } from "@/data/insights";
@@ -78,8 +79,14 @@ export default function InsightsPage() {
               <ScrollReveal key={insight.slug} delay={index * 0.1}>
                 <Link href={`/insights/${insight.slug}`} className="block group h-full">
                   <Card className="h-full border-border overflow-hidden card-elevated flex flex-col">
-                    <div className="w-full h-48 bg-secondary flex items-center justify-center relative overflow-hidden group-hover:scale-105 transition-transform duration-500">
-                      <span className="text-muted-foreground font-serif italic text-lg">{insight.category} Insight</span>
+                    <div className="w-full h-48 bg-secondary relative overflow-hidden">
+                      <Image
+                        src={insight.image}
+                        alt={insight.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
                     </div>
                     
                     <CardHeader className="pt-6 pb-2">

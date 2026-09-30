@@ -1,12 +1,12 @@
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import { caseStudies } from "@/data/case-studies";
-import { SectionHeader } from "@/components/shared/SectionHeader";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { CTAButton } from "@/components/shared/CTAButton";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, Quote } from "lucide-react";
+import { ArrowLeft, Quote } from "lucide-react";
 import type { Metadata } from "next";
 
 type Props = {
@@ -174,10 +174,14 @@ export default async function CaseStudyDetailPage({ params }: Props) {
                   className="block group h-full"
                 >
                   <Card className="h-full border-border card-elevated">
-                    <div className="w-full h-40 bg-secondary flex items-center justify-center">
-                      <span className="text-muted-foreground font-serif italic text-sm">
-                        {other.industry} Visual
-                      </span>
+                    <div className="w-full h-40 bg-secondary relative overflow-hidden">
+                      <Image
+                        src={other.image}
+                        alt={other.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
                     </div>
                     <CardContent className="p-6">
                       <Badge className="bg-primary/10 text-primary border-none mb-3 text-xs">

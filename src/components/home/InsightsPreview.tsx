@@ -2,6 +2,7 @@
 
 import { SectionHeader } from "../shared/SectionHeader";
 import { ScrollReveal } from "../shared/ScrollReveal";
+import Image from "next/image";
 import { insights } from "@/data/insights";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -35,9 +36,14 @@ export function InsightsPreview() {
             <ScrollReveal key={insight.slug} delay={index * 0.15}>
               <Link href={`/insights/${insight.slug}`} className="block group h-full">
                 <Card className="h-full border-border overflow-hidden card-elevated flex flex-col">
-                  {/* Image Placeholder */}
-                  <div className="w-full h-48 bg-secondary flex items-center justify-center relative overflow-hidden group-hover:scale-105 transition-transform duration-500">
-                    <span className="text-muted-foreground font-serif italic text-lg">{insight.category} Insight</span>
+                  <div className="w-full h-48 bg-secondary relative overflow-hidden">
+                    <Image
+                      src={insight.image}
+                      alt={insight.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
                   </div>
                   
                   <CardHeader className="pt-6 pb-2">

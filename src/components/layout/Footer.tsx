@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Briefcase, MessageCircle, Mail, MapPin, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -10,9 +11,13 @@ export function Footer() {
           {/* Brand & Newsletter */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-6">
-              <div className="w-8 h-8 bg-emerald rounded flex items-center justify-center text-white font-bold text-xl">
-                O
-              </div>
+              <Image
+                src="/ox-consults-logo.svg"
+                alt=""
+                width={40}
+                height={32}
+                className="h-8 w-10 rounded-sm bg-white object-contain"
+              />
               <span className="font-serif font-bold text-2xl text-white tracking-tight">Ox Consults</span>
             </div>
             <p className="text-sm mb-6 text-slate-400">

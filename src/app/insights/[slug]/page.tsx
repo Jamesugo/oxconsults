@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import { insights } from "@/data/insights";
 import { teamMembers } from "@/data/team";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
@@ -6,7 +7,7 @@ import { CTAButton } from "@/components/shared/CTAButton";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, Calendar, Clock, Tag, UserCircle } from "lucide-react";
+import { ArrowLeft, Calendar, Clock, Tag, UserCircle } from "lucide-react";
 import type { Metadata } from "next";
 
 type Props = {
@@ -238,11 +239,15 @@ export default async function InsightDetailPage({ params }: Props) {
                     href={`/insights/${related.slug}`}
                     className="block group h-full"
                   >
-                    <Card className="h-full border-border card-elevated">
-                      <div className="w-full h-40 bg-secondary flex items-center justify-center">
-                        <span className="text-muted-foreground font-serif italic text-sm">
-                          {related.category} Insight
-                        </span>
+                    <Card className="h-full border-border card-elevated overflow-hidden">
+                      <div className="w-full h-40 bg-secondary relative overflow-hidden">
+                        <Image
+                          src={related.image}
+                          alt={related.title}
+                          fill
+                          sizes="(max-width: 768px) 100vw, 33vw"
+                          className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
                       </div>
                       <CardContent className="p-6">
                         <div className="flex items-center justify-between mb-3">

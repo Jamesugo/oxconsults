@@ -2,6 +2,7 @@
 
 import { SectionHeader } from "../shared/SectionHeader";
 import { ScrollReveal } from "../shared/ScrollReveal";
+import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { caseStudies } from "@/data/case-studies";
 import Link from "next/link";
@@ -34,10 +35,15 @@ export function CaseStudyPreview() {
             <ScrollReveal key={study.slug} delay={index * 0.15}>
               <Link href={`/case-studies/${study.slug}`} className="block group h-full">
                 <Card className="h-full border-border overflow-hidden card-elevated rounded-xl">
-                  {/* Image Placeholder - since we don't have real images yet */}
                   <div className="w-full h-48 bg-secondary flex items-center justify-center relative overflow-hidden">
+                    <Image
+                      src={study.image}
+                      alt={study.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
-                    <span className="text-muted-foreground font-serif italic text-lg z-0">{study.industry} Visual</span>
                     
                     <div className="absolute bottom-4 left-4 z-20 flex gap-2">
                       <span className="bg-primary text-primary-foreground text-xs px-2 py-1 rounded font-medium">
