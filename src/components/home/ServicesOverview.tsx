@@ -18,9 +18,9 @@ export function ServicesOverview() {
     <section className="py-24 bg-background">
       <div className="container mx-auto px-6">
         <SectionHeader 
-          title="Our Expertise" 
-          subtitle="Comprehensive advisory solutions across the entire business lifecycle."
-          label="Practice Areas"
+          title="Ways We Can Help"
+          subtitle="Practical support to help your business solve problems, make decisions, and grow."
+          label="Our Services"
           className="mb-16"
         />
 
@@ -50,7 +50,7 @@ export function ServicesOverview() {
                     </CardContent>
                     <CardFooter>
                       <div className="text-gold flex items-center text-sm font-semibold group-hover:text-emerald transition-colors">
-                        Explore <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
+                        Learn More <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
                       </div>
                     </CardFooter>
                   </Card>

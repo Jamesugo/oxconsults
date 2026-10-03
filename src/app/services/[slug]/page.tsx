@@ -44,7 +44,7 @@ export default async function ServiceDetailPage({ params }: Props) {
             href="/services"
             className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-8"
           >
-            <ArrowLeft className="w-4 h-4" /> Back to Services
+            <ArrowLeft className="w-4 h-4" /> All Services
           </Link>
 
           <SectionHeader
@@ -61,7 +61,7 @@ export default async function ServiceDetailPage({ params }: Props) {
         <div className="container mx-auto px-6 max-w-5xl">
           <ScrollReveal>
             <h2 className="heading-section text-3xl md:text-4xl mb-12">
-              Challenges We Address
+              Problems We Can Help Solve
             </h2>
           </ScrollReveal>
 
@@ -85,11 +85,11 @@ export default async function ServiceDetailPage({ params }: Props) {
         <div className="container mx-auto px-6 max-w-5xl">
           <ScrollReveal>
             <h2 className="heading-section text-3xl md:text-4xl mb-4">
-              Our Methodology
+              How We Work
             </h2>
             <p className="text-muted-foreground text-lg mb-16 max-w-3xl">
-              A proven, structured approach that combines analytical rigor with
-              pragmatic execution to deliver lasting results.
+              We work with your team to understand the problem, agree on a plan,
+              and put useful changes into practice.
             </p>
           </ScrollReveal>
 
@@ -122,9 +122,9 @@ export default async function ServiceDetailPage({ params }: Props) {
         <div className="container mx-auto px-6 max-w-5xl">
           <ScrollReveal>
             <SectionHeader
-              title="Key Deliverables"
-              subtitle="Tangible outputs that drive measurable impact and lasting change."
-              label="What You Receive"
+              title="What You Get"
+              subtitle="Clear plans and practical support your team can use."
+              label="Our Work"
               light
               align="left"
               className="mb-16"
@@ -152,12 +152,12 @@ export default async function ServiceDetailPage({ params }: Props) {
               Ready to get started?
             </h2>
             <p className="text-muted-foreground text-lg mb-8">
-              Let's discuss how our {service.shortTitle.toLowerCase()} expertise
-              can help your organization achieve its goals.
+              Tell us what your organization would like to improve, and we can
+              discuss some practical next steps.
             </p>
             <Link href="/booking">
               <CTAButton size="lg" className="h-14 px-8 text-lg">
-                Schedule a Discovery Call
+                Book a Call
               </CTAButton>
             </Link>
           </ScrollReveal>

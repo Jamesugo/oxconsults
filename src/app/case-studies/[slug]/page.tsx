@@ -48,7 +48,7 @@ export default async function CaseStudyDetailPage({ params }: Props) {
             href="/case-studies"
             className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-8"
           >
-            <ArrowLeft className="w-4 h-4" /> Back to Case Studies
+            <ArrowLeft className="w-4 h-4" /> All Case Studies
           </Link>
 
           <div className="flex flex-wrap gap-3 mb-6">
@@ -204,15 +204,14 @@ export default async function CaseStudyDetailPage({ params }: Props) {
         <div className="container mx-auto px-6 text-center max-w-3xl">
           <ScrollReveal>
             <h2 className="heading-section text-3xl md:text-4xl mb-6">
-              Ready to achieve similar results?
+              Looking for similar results?
             </h2>
             <p className="text-muted-foreground text-lg mb-8">
-              Let&apos;s discuss how we can help your organization drive
-              measurable impact.
+              Tell us what you would like to improve, and we can talk about how to get started.
             </p>
             <Link href="/booking">
               <CTAButton size="lg" className="h-14 px-8 text-lg">
-                Start a Conversation
+                Talk to Our Team
               </CTAButton>
             </Link>
           </ScrollReveal>

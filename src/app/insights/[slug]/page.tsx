@@ -50,7 +50,7 @@ export default async function InsightDetailPage({ params }: Props) {
             href="/insights"
             className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-8"
           >
-            <ArrowLeft className="w-4 h-4" /> Back to Insights
+            <ArrowLeft className="w-4 h-4" /> All Articles
           </Link>
 
           <div className="flex flex-wrap items-center gap-3 mb-6">
@@ -103,102 +103,85 @@ export default async function InsightDetailPage({ params }: Props) {
             <article className="prose prose-lg dark:prose-invert max-w-none">
               <div className="space-y-6 text-muted-foreground text-lg leading-relaxed">
                 <p>
-                  {insight.excerpt} This perspective draws on our extensive
-                  experience working with leading organizations across
-                  industries to identify the trends and strategies that matter
-                  most.
+                  {insight.excerpt} In this article, we share ideas from our
+                  work with businesses and organizations.
                 </p>
 
                 <h2 className="heading-section text-2xl md:text-3xl !text-foreground mt-12 mb-6">
-                  The Landscape
+                  What Is Changing
                 </h2>
                 <p>
-                  The forces shaping the {insight.category.toLowerCase()} space
-                  today are unlike anything we have seen in recent decades. From
-                  rapid technological advancement to shifting regulatory
-                  frameworks and evolving stakeholder expectations,
-                  organizations must navigate an increasingly complex
-                  environment.
+                  Businesses face changes in technology, rules, and what
+                  customers expect. Understanding these changes can help teams
+                  make better choices and prepare for what comes next.
                 </p>
                 <p>
-                  Our research and client work reveal a consistent pattern:
-                  organizations that take a proactive, structured approach to
-                  these challenges consistently outperform their peers. The
-                  difference lies not just in strategy, but in the speed and
-                  quality of execution.
+                  Businesses are more likely to make progress when they spot
+                  problems early, agree on what to do, and follow through. A
+                  plan only works when people can put it into practice.
                 </p>
 
                 <h2 className="heading-section text-2xl md:text-3xl !text-foreground mt-12 mb-6">
-                  Key Insights
+                  What Businesses Can Do
                 </h2>
                 <p>
-                  Through our work with C-suite leaders and board directors, we
-                  have identified several critical themes that are reshaping how
-                  successful organizations operate:
+                  A few simple habits can help teams respond to change and keep
+                  moving forward:
                 </p>
                 <ul className="space-y-3 my-6">
                   <li className="flex items-start gap-3">
                     <span className="w-2 h-2 rounded-full bg-emerald mt-2.5 shrink-0" />
                     <span>
                       <strong className="text-foreground">
-                        Adaptability as a core competency:
+                        Be ready to adjust:
                       </strong>{" "}
-                      The ability to sense, respond, and pivot quickly has become
-                      a fundamental organizational capability, not just a nice
-                      to have.
+                      Pay attention to what is changing and be willing to update
+                      your plans when needed.
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="w-2 h-2 rounded-full bg-emerald mt-2.5 shrink-0" />
                     <span>
                       <strong className="text-foreground">
-                        Data-driven decision making:
+                        Use useful information:
                       </strong>{" "}
-                      Leaders who invest in analytical capabilities and
-                      data infrastructure are making better decisions faster—and
-                      seeing measurable impact on performance.
+                      Check the facts and listen to customers and staff before
+                      making important decisions.
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="w-2 h-2 rounded-full bg-emerald mt-2.5 shrink-0" />
                     <span>
                       <strong className="text-foreground">
-                        Talent as a strategic lever:
+                        Support your people:
                       </strong>{" "}
-                      The organizations winning the talent war are those that
-                      treat their people strategy with the same rigor they apply
-                      to financial and operational strategy.
+                      Give people the skills, tools, and guidance they need to
+                      do their jobs well.
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="w-2 h-2 rounded-full bg-emerald mt-2.5 shrink-0" />
                     <span>
                       <strong className="text-foreground">
-                        Stakeholder value over shareholder value:
+                        Think about everyone affected:
                       </strong>{" "}
-                      A broader view of value creation—encompassing employees,
-                      customers, communities, and the environment—is proving to
-                      be a source of durable competitive advantage.
+                      Consider how decisions affect customers, staff, local
+                      communities, and the environment.
                     </span>
                   </li>
                 </ul>
 
                 <h2 className="heading-section text-2xl md:text-3xl !text-foreground mt-12 mb-6">
-                  Implications for Leaders
+                  A Useful Next Step
                 </h2>
                 <p>
-                  For executives navigating this landscape, the imperative is
-                  clear: invest in understanding these dynamics deeply, build
-                  organizational capabilities to respond, and act with both
-                  urgency and discipline. The window for competitive advantage is
-                  narrowing, and the cost of inaction is rising.
+                  Start by choosing one problem you can work on now. Talk with
+                  the people affected, agree on a first step, and check whether
+                  it is making things better.
                 </p>
                 <p>
-                  At Ox Consults, we help leadership teams translate these
-                  insights into actionable strategies that drive measurable
-                  results. Our approach combines analytical rigor with
-                  operational pragmatism—ensuring that great strategy does not
-                  remain on the shelf.
+                  At Ox Consults, we help teams understand their challenges,
+                  make a practical plan, and put it into action.
                 </p>
               </div>
             </article>
@@ -228,7 +211,7 @@ export default async function InsightDetailPage({ params }: Props) {
           <div className="container mx-auto px-6 max-w-5xl">
             <ScrollReveal>
               <h2 className="heading-section text-3xl md:text-4xl mb-12">
-                Related Insights
+                More Articles
               </h2>
             </ScrollReveal>
 
@@ -279,18 +262,18 @@ export default async function InsightDetailPage({ params }: Props) {
         <div className="container mx-auto px-6 text-center max-w-3xl">
           <ScrollReveal>
             <h2 className="heading-section text-3xl md:text-4xl mb-6 text-white">
-              Want to discuss these ideas further?
+              Want help putting these ideas into practice?
             </h2>
             <p className="text-slate-300 text-lg mb-8">
-              Our team is ready to explore how these insights apply to your
-              organization&apos;s specific context and challenges.
+              Tell us what your business is working on, and we can talk about
+              how we may be able to help.
             </p>
             <Link href="/booking">
               <CTAButton
                 size="lg"
                 className="h-14 px-8 text-lg bg-white text-navy hover:bg-slate-200"
               >
-                Schedule a Conversation
+                Book a Call
               </CTAButton>
             </Link>
           </ScrollReveal>

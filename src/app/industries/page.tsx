@@ -9,7 +9,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Industries | Ox Consults",
-  description: "Specialized expertise across key global industries.",
+  description: "See how we help businesses and organizations in different fields.",
 };
 
 const iconMap: Record<string, React.ElementType> = {
@@ -24,9 +24,9 @@ export default function IndustriesPage() {
         
         <div className="container mx-auto px-6 relative z-10 text-center max-w-4xl">
           <SectionHeader 
-            title="Industry Expertise" 
-            subtitle="Deep sector knowledge to navigate disruption and capture opportunities in a rapidly changing world."
-            label="Sectors"
+            title="Who We Work With"
+            subtitle="We work with organizations across many fields to solve challenges and make the most of new opportunities."
+            label="Industries"
           />
         </div>
       </section>
@@ -53,7 +53,7 @@ export default function IndustriesPage() {
                         </CardDescription>
                         
                         <div className="space-y-2">
-                          <p className="text-xs font-semibold text-gold uppercase tracking-wider">Key Challenges</p>
+                          <p className="text-xs font-semibold text-gold uppercase tracking-wider">Common Challenges</p>
                           <ul className="text-sm text-muted-foreground space-y-1 pl-4 list-disc marker:text-gold/50">
                             {industry.challenges.slice(0, 3).map((c, i) => (
                               <li key={i} className="line-clamp-1">{c}</li>
@@ -63,7 +63,7 @@ export default function IndustriesPage() {
                       </CardContent>
                       <div className="p-6 pt-0 mt-auto">
                         <div className="text-gold flex items-center text-sm font-semibold group-hover:text-emerald transition-colors pt-4 border-t border-border">
-                          View Industry Capabilities <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
+                          See How We Can Help <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
                         </div>
                       </div>
                     </Card>
@@ -77,13 +77,13 @@ export default function IndustriesPage() {
 
       <section className="py-24 bg-navy-deep text-white border-t border-border">
         <div className="container mx-auto px-6 text-center max-w-3xl">
-          <h2 className="heading-section text-3xl md:text-4xl mb-6">Need specialized industry advice?</h2>
+          <h2 className="heading-section text-3xl md:text-4xl mb-6">Need help with a challenge in your industry?</h2>
           <p className="text-slate-300 text-lg mb-8">
-            Connect with one of our industry partners to discuss your specific market dynamics.
+            Talk with our team about what is happening in your field and how we may be able to help.
           </p>
           <Link href="/booking">
             <CTAButton size="lg" className="h-14 px-8 text-lg bg-white text-navy hover:bg-slate-200">
-              Speak with a Partner
+              Talk to Our Team
             </CTAButton>
           </Link>
         </div>

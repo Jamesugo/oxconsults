@@ -53,13 +53,13 @@ export default async function IndustryDetailPage({ params }: Props) {
             href="/industries"
             className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-8"
           >
-            <ArrowLeft className="w-4 h-4" /> Back to Industries
+            <ArrowLeft className="w-4 h-4" /> All Industries
           </Link>
 
           <SectionHeader
             title={industry.title}
             subtitle={industry.description}
-            label="Industry Expertise"
+            label="How We Help"
             align="left"
           />
         </div>
@@ -90,12 +90,11 @@ export default async function IndustryDetailPage({ params }: Props) {
         <div className="container mx-auto px-6 max-w-5xl">
           <ScrollReveal>
             <h2 className="heading-section text-3xl md:text-4xl mb-4">
-              Key Industry Challenges
+              Common Challenges
             </h2>
             <p className="text-muted-foreground text-lg mb-16 max-w-3xl">
-              The {industry.title.toLowerCase()} sector faces a unique set of
-              challenges that require specialized expertise and proven
-              approaches.
+              These are some of the common problems organizations in{" "}
+              {industry.title.toLowerCase()} face.
             </p>
           </ScrollReveal>
 
@@ -126,8 +125,8 @@ export default async function IndustryDetailPage({ params }: Props) {
               How We Help
             </h2>
             <p className="text-muted-foreground text-lg mb-16 max-w-3xl">
-              Our capabilities tailored to the {industry.title.toLowerCase()}{" "}
-              sector.
+              Here are some of the ways we support organizations in{" "}
+              {industry.title.toLowerCase()}.
             </p>
           </ScrollReveal>
 
@@ -153,7 +152,7 @@ export default async function IndustryDetailPage({ params }: Props) {
                         {service.description}
                       </p>
                       <span className="text-gold text-sm font-semibold flex items-center group-hover:text-emerald transition-colors">
-                        Learn More{" "}
+                        See How We Can Help{" "}
                         <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
                       </span>
                     </CardContent>
@@ -171,10 +170,10 @@ export default async function IndustryDetailPage({ params }: Props) {
           <div className="container mx-auto px-6 max-w-5xl">
             <ScrollReveal>
               <h2 className="heading-section text-3xl md:text-4xl mb-4">
-                Your Industry Leaders
+                Meet Our Team
               </h2>
               <p className="text-muted-foreground text-lg mb-16 max-w-3xl">
-                Seasoned professionals with deep expertise in{" "}
+                Our team has experience working with organizations in{" "}
                 {industry.title.toLowerCase()}.
               </p>
             </ScrollReveal>
@@ -212,19 +211,18 @@ export default async function IndustryDetailPage({ params }: Props) {
         <div className="container mx-auto px-6 text-center max-w-3xl">
           <ScrollReveal>
             <h2 className="heading-section text-3xl md:text-4xl mb-6 text-white">
-              Let&apos;s discuss your {industry.title.toLowerCase()} challenges
+              Need help with a challenge in {industry.title.toLowerCase()}?
             </h2>
             <p className="text-slate-300 text-lg mb-8">
-              Connect with one of our industry specialists to explore how we can
-              help your organization navigate complexity and capture
-              opportunities.
+              Tell us what your organization is facing, and we can discuss
+              practical ways to help.
             </p>
             <Link href="/booking">
               <CTAButton
                 size="lg"
                 className="h-14 px-8 text-lg bg-white text-navy hover:bg-slate-200"
               >
-                Speak with a Specialist
+                Talk to Our Team
               </CTAButton>
             </Link>
           </ScrollReveal>

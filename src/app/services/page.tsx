@@ -6,7 +6,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Services | Ox Consults",
-  description: "Comprehensive advisory solutions across the entire business lifecycle.",
+  description: "Practical support to help your business solve problems, make decisions, and grow.",
 };
 
 export default function ServicesPage() {
@@ -18,8 +18,8 @@ export default function ServicesPage() {
         <div className="container mx-auto px-6 relative z-10 text-center max-w-4xl">
           <SectionHeader 
             title="Our Services" 
-            subtitle="We bring deep domain expertise, analytical rigor, and execution capability to your most critical challenges."
-            label="Practice Areas"
+            subtitle="We help you solve everyday business problems, make important decisions, and put practical plans into action."
+            label="How We Can Help"
           />
         </div>
       </section>
@@ -31,11 +31,11 @@ export default function ServicesPage() {
         <div className="container mx-auto px-6 text-center max-w-3xl">
           <h2 className="heading-section text-3xl md:text-4xl mb-6">Not sure where to start?</h2>
           <p className="text-muted-foreground text-lg mb-8">
-            Let's discuss your current challenges and explore how we can help you achieve your strategic objectives.
+            Tell us what your business needs help with, and we can talk through some useful next steps.
           </p>
           <Link href="/booking">
             <CTAButton size="lg" className="h-14 px-8 text-lg">
-              Schedule a Discovery Call
+              Book a Call
             </CTAButton>
           </Link>
         </div>

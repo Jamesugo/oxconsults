@@ -55,17 +55,11 @@ export function Navbar() {
         <Link href="/" className="flex shrink-0 items-center gap-2 group">
           <Image
             src="/ox-consults-logo.svg"
-            alt=""
-            width={40}
-            height={32}
-            className="h-8 w-10 rounded-sm bg-white object-contain"
+            alt="Ox Consults"
+            width={60}
+            height={48}
+            className="h-12 w-[60px] object-contain"
           />
-          <span className={cn(
-            "font-serif font-bold text-xl tracking-tight transition-colors",
-            scrolled ? "text-foreground" : "text-foreground dark:text-white"
-          )}>
-            Ox Consults
-          </span>
         </Link>
 
         {/* Desktop Nav */}
@@ -136,12 +130,11 @@ export function Navbar() {
               <div className="flex items-center gap-3 border-b border-border pb-5 pr-10">
                 <Image
                   src="/ox-consults-logo.svg"
-                  alt=""
-                  width={50}
-                  height={40}
-                  className="h-10 w-[50px] rounded-sm bg-white object-contain"
+                  alt="Ox Consults"
+                  width={72}
+                  height={58}
+                  className="h-[58px] w-[72px] object-contain"
                 />
-                <span className="font-serif text-lg font-bold text-foreground">Ox Consults</span>
               </div>
               <nav className="mt-6 flex flex-col gap-1">
                 {visibleLinks.map((link) => (

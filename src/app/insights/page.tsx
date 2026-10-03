@@ -30,9 +30,9 @@ export default function InsightsPage() {
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-3xl">
             <SectionHeader 
-              title="Latest Perspectives" 
-              subtitle="Our latest thinking on the issues that matter most in business, leadership, and technology."
-              label="Insights"
+              title="Ideas and Advice for Your Business"
+              subtitle="Straightforward advice on business, leadership, and technology."
+              label="Articles"
               align="left"
             />
           </div>
@@ -63,7 +63,7 @@ export default function InsightsPage() {
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
             <Input 
               type="text"
-              placeholder="Search insights..."
+              placeholder="Search articles..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="pl-9 h-10 bg-background border-border"
@@ -114,7 +114,7 @@ export default function InsightsPage() {
                         <Clock className="w-3 h-3" /> {insight.readTime}
                       </span>
                       <span className="text-gold text-sm font-semibold flex items-center group-hover:text-emerald transition-colors">
-                        Read Article <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
+                        Read More <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
                       </span>
                     </CardFooter>
                   </Card>
@@ -125,7 +125,7 @@ export default function InsightsPage() {
           
           {filteredInsights.length === 0 && (
             <div className="text-center py-24 text-muted-foreground">
-              No insights found matching your criteria.
+              No articles found. Try another search or category.
             </div>
           )}
         </div>

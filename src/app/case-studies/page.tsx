@@ -27,8 +27,8 @@ export default function CaseStudiesPage() {
         
         <div className="container mx-auto px-6 relative z-10 text-center max-w-4xl">
           <SectionHeader 
-            title="Impact In Action" 
-            subtitle="Explore how we partner with ambitious organizations to solve complex problems and drive measurable results."
+            title="How We Helped Businesses Get Results"
+            subtitle="Read how we helped businesses solve problems, improve their work, and reach their goals."
             label="Case Studies"
           />
         </div>
@@ -38,7 +38,7 @@ export default function CaseStudiesPage() {
         <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-4">
           <div className="flex items-center gap-2 text-muted-foreground font-medium shrink-0">
             <Filter className="w-4 h-4" />
-            <span>Filter by Industry:</span>
+            <span>Show results for:</span>
           </div>
           
           <div className="flex flex-wrap gap-2">
@@ -120,7 +120,7 @@ export default function CaseStudiesPage() {
           
           {filteredStudies.length === 0 && (
             <div className="text-center py-24 text-muted-foreground">
-              No case studies found for the selected industry.
+              We do not have any examples for this area yet.
             </div>
           )}
         </div>

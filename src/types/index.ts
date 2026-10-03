@@ -101,7 +101,7 @@ export interface Insight {
   tags: string[];
 }
 
-export type InsightCategory = 'Strategy' | 'Leadership' | 'Digital' | 'Markets' | 'Operations';
+export type InsightCategory = 'Strategy' | 'Leadership' | 'Digital' | 'Technology' | 'Markets' | 'Operations';
 
 export interface BookingFormData {
   service: string;
